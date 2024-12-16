@@ -1,0 +1,135 @@
+/* Basic CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+#players-section, #game-board, #winner-section, #scorecard-section {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="text"] {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+
+i {
+  font-size: 50px;
+  margin: 10px;
+}
+
+
+#boxes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #007bff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #e9ecef;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.box.shut {
+  background-color: #6c757d;
+  color: #ffffff;
+  border-color: #343a40;
+  cursor: not-allowed;
+}
+
+
+#scorecard-section {
+  display: none;
+}
+
+#score-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#score-table th, #score-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#score-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+
+#winner-section {
+  display: none;
+}
+
+#winner-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#play-again-btn {
+  background-color: #28a745;
+}
+
+#play-again-btn:hover {
+  background-color: #218838;
+}

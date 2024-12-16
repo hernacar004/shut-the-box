@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shut the Box</h1>
+
+    <div id="players-section">
+        <input id="player1-name" type="text" placeholder="Player 1 Name">
+        <input id="player2-name" type="text" placeholder="Player 2 Name">
+        <button id="start-btn">Start</button>
+    </div>
+
+
+    <div id="game-board" style="display: none;">
+        <div id="scoreboard">
+            <p id="player1-display"></p>
+            <p id="player2-display"></p>
+            <p id="turn-display"></p>
+        </div>
+
+        <div id="dice-container">
+            <i id="dice1" class="bi bi-dice-1"></i>
+            <i id="dice2" class="bi bi-dice-1"></i>
+        </div>
+        <div id="boxes-container">
+            <div id="box1" class="box">1</div>
+            <div id="box2" class="box">2</div>
+            <div id="box3" class="box">3</div>
+            <div id="box4" class="box">4</div>
+            <div id="box5" class="box">5</div>
+            <div id="box6" class="box">6</div>
+            <div id="box7" class="box">7</div>
+            <div id="box8" class="box">8</div>
+            <div id="box9" class="box">9</div>
+        </div>
+        <div id="buttons-container">
+            <button id="roll-btn" disabled>Roll</button>
+            <button id="individual-btn" disabled>Individual</button>
+            <button id="sum-btn" disabled>Sum</button>
+            <button id="end-turn-btn" disabled>End Turn</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+
+    <div id="scorecard-section" style="display: none;">
+        <table id="score-table">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Player 1</th>
+                    <th>Player 2</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+    <div id="winner-section" style="display: none;">
+        <p id="winner-display"></p>
+        <button id="play-again-btn">Play Again</button>
+    </div>
+
+
+</body>
+<script src="./game.js"></script>
+</html>
